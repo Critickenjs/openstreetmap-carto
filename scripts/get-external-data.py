@@ -292,11 +292,11 @@ def main():
 
         # If the DB options are unspecified in both on the command line and in the
         # config file, libpq will pick what to use with the None
-        database = opts.database or config["settings"].get("database")
-        host = opts.host or config["settings"].get("host")
-        port = opts.port or config["settings"].get("port")
-        user = opts.username or config["settings"].get("username")
-        password = opts.password or config["settings"].get("password")
+        database = "gis"
+        host = "192.168.0.4"
+        port = "5432"
+        user = "docker"
+        password = "docker"
 
         renderuser = opts.renderuser or config["settings"].get("renderuser")
 

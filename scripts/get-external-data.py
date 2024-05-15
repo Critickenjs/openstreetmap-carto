@@ -23,7 +23,7 @@ import shutil
 # modules for getting data
 import zipfile
 import requests
-import 
+import io
 
 # modules for converting and postgres loading
 import subprocess

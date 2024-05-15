@@ -23,7 +23,7 @@ import shutil
 # modules for getting data
 import zipfile
 import requests
-import io
+import 
 
 # modules for converting and postgres loading
 import subprocess
@@ -302,10 +302,14 @@ def main():
 
         with Downloader() as d:
             conn = None
-            conn = psycopg2.connect(database=database,
-                             host=host, port=port,
-                             user=user,
-                             password=password)
+            conn = conn = psycopg2.connect(
+            dbname="gis",
+            user="docker",
+            password="docker",
+            host="192.168.0.4",
+            port="5432"
+        )
+
 
             # DB setup
             database_setup(conn, config["settings"]["temp_schema"],
